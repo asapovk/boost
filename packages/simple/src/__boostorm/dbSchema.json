@@ -1,0 +1,3862 @@
+[
+    {
+        "table_name": "DELETED_ELS",
+        "columns": [
+            {
+                "column_name": "id_org",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "DELETED_ELS"
+            },
+            {
+                "column_name": "id_client_jnt_account",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "DELETED_ELS"
+            },
+            {
+                "column_name": "id_jnt_account",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "DELETED_ELS"
+            },
+            {
+                "column_name": "nm_org",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "DELETED_ELS"
+            },
+            {
+                "column_name": "client_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "DELETED_ELS"
+            },
+            {
+                "column_name": "nn_ls",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "DELETED_ELS"
+            },
+            {
+                "column_name": "nm_login",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "DELETED_ELS"
+            },
+            {
+                "column_name": "id_abonent",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "DELETED_ELS"
+            }
+        ],
+        "joins": [],
+        "joinsColums": [],
+        "primary_key": ""
+    },
+    {
+        "table_name": "TMP_ELS",
+        "columns": [
+            {
+                "column_name": "vl_password",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "TMP_ELS"
+            },
+            {
+                "column_name": "nn_login",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "TMP_ELS"
+            },
+            {
+                "column_name": "payment_code",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "TMP_ELS"
+            },
+            {
+                "column_name": "client_ex_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "TMP_ELS"
+            },
+            {
+                "column_name": "els",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "TMP_ELS"
+            },
+            {
+                "column_name": "account_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "TMP_ELS"
+            },
+            {
+                "column_name": "client_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "TMP_ELS"
+            },
+            {
+                "column_name": "jnt_account_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "TMP_ELS"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "TMP_ELS"
+            },
+            {
+                "column_name": "NM_ORG",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "TMP_ELS"
+            },
+            {
+                "column_name": "ls_pu",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "TMP_ELS"
+            }
+        ],
+        "joins": [],
+        "joinsColums": [],
+        "primary_key": ""
+    },
+    {
+        "table_name": "account",
+        "columns": [
+            {
+                "column_name": "ex_uuid",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "account"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "account"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "account"
+            },
+            {
+                "column_name": "payment_allowed",
+                "data_type": "smallint",
+                "is_nullable": "NO",
+                "column_default": "0",
+                "table_name": "account"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "account"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('abonent_id_seq'::regclass)",
+                "table_name": "account"
+            },
+            {
+                "column_name": "ex_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "account"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "account"
+            },
+            {
+                "column_name": "account",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "account"
+            }
+        ],
+        "joins": [
+            "client_account",
+            "payment",
+            "ticket",
+            "order_payment",
+            "quiz_answers",
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "client_account",
+                "left_column": "account_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "payment",
+                "left_column": "account_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "ticket",
+                "left_column": "account_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "order_payment",
+                "left_column": "lspu_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "quiz_answers",
+                "left_column": "account_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "provider",
+                "left_column": "id",
+                "right_column": "provider_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "cheque",
+        "columns": [
+            {
+                "column_name": "notify_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "cheque"
+            },
+            {
+                "column_name": "send_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "cheque"
+            },
+            {
+                "column_name": "order_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "cheque"
+            },
+            {
+                "column_name": "inn",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "cheque"
+            },
+            {
+                "column_name": "kkt_id",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "cheque"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "cheque"
+            },
+            {
+                "column_name": "total",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "0",
+                "table_name": "cheque"
+            },
+            {
+                "column_name": "notified",
+                "data_type": "boolean",
+                "is_nullable": "NO",
+                "column_default": "false",
+                "table_name": "cheque"
+            },
+            {
+                "column_name": "sent",
+                "data_type": "boolean",
+                "is_nullable": "NO",
+                "column_default": "false",
+                "table_name": "cheque"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "cheque"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "cheque"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('cheque_id_seq'::regclass)",
+                "table_name": "cheque"
+            }
+        ],
+        "joins": [
+            "cheque_process",
+            "order",
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "cheque_process",
+                "left_column": "cheque_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "order",
+                "left_column": "id",
+                "right_column": "order_id"
+            },
+            {
+                "table_name": "provider",
+                "left_column": "id",
+                "right_column": "provider_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "cheque_process",
+        "columns": [
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "cheque_process"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('cheque_process_id_seq'::regclass)",
+                "table_name": "cheque_process"
+            },
+            {
+                "column_name": "data",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "cheque_process"
+            },
+            {
+                "column_name": "process_type",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "cheque_process"
+            },
+            {
+                "column_name": "cheque_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "cheque_process"
+            }
+        ],
+        "joins": [
+            "cheque"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "cheque",
+                "left_column": "id",
+                "right_column": "cheque_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "client",
+        "columns": [
+            {
+                "column_name": "phone",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client"
+            },
+            {
+                "column_name": "photo",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client"
+            },
+            {
+                "column_name": "hash",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client"
+            },
+            {
+                "column_name": "ex_password_salt",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client"
+            },
+            {
+                "column_name": "ex_login",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client"
+            },
+            {
+                "column_name": "is_adm",
+                "data_type": "smallint",
+                "is_nullable": "YES",
+                "column_default": "0",
+                "table_name": "client"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "client"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "client"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('client_id_seq'::regclass)",
+                "table_name": "client"
+            },
+            {
+                "column_name": "ex_password_type",
+                "data_type": "smallint",
+                "is_nullable": "YES",
+                "column_default": "0",
+                "table_name": "client"
+            },
+            {
+                "column_name": "identifier",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client"
+            },
+            {
+                "column_name": "email",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client"
+            },
+            {
+                "column_name": "ex_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client"
+            },
+            {
+                "column_name": "ex_password",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client"
+            }
+        ],
+        "joins": [
+            "client_account",
+            "client_session",
+            "payment",
+            "ticket",
+            "client_agreement",
+            "client_jnt_account",
+            "order",
+            "quiz_answers"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "client_account",
+                "left_column": "client_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "client_session",
+                "left_column": "client_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "payment",
+                "left_column": "client_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "ticket",
+                "left_column": "client_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "client_agreement",
+                "left_column": "client_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "client_jnt_account",
+                "left_column": "client_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "order",
+                "left_column": "client_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "quiz_answers",
+                "left_column": "client_id",
+                "right_column": "id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "client_account",
+        "columns": [
+            {
+                "column_name": "account_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "client_account"
+            },
+            {
+                "column_name": "ex_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_account"
+            },
+            {
+                "column_name": "is_full",
+                "data_type": "smallint",
+                "is_nullable": "NO",
+                "column_default": "0",
+                "table_name": "client_account"
+            },
+            {
+                "column_name": "jnt_account_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_account"
+            },
+            {
+                "column_name": "client_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "client_account"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_account"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "client_account"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('clinet_account_id_seq'::regclass)",
+                "table_name": "client_account"
+            },
+            {
+                "column_name": "alias",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_account"
+            }
+        ],
+        "joins": [
+            "client",
+            "account",
+            "jnt_account"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "client",
+                "left_column": "id",
+                "right_column": "client_id"
+            },
+            {
+                "table_name": "account",
+                "left_column": "id",
+                "right_column": "account_id"
+            },
+            {
+                "table_name": "jnt_account",
+                "left_column": "id",
+                "right_column": "jnt_account_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "client_agreement",
+        "columns": [
+            {
+                "column_name": "client_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "client_agreement"
+            },
+            {
+                "column_name": "device",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_agreement"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('client_agreement_id_seq'::regclass)",
+                "table_name": "client_agreement"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_agreement"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "client_agreement"
+            }
+        ],
+        "joins": [
+            "client"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "client",
+                "left_column": "id",
+                "right_column": "client_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "client_cards",
+        "columns": [
+            {
+                "column_name": "holder",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_cards"
+            },
+            {
+                "column_name": "uid",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_cards"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_cards"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_cards"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_cards"
+            },
+            {
+                "column_name": "brand",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_cards"
+            },
+            {
+                "column_name": "parameters",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_cards"
+            },
+            {
+                "column_name": "client_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "client_cards"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_cards"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('client_cards_id_seq'::regclass)",
+                "table_name": "client_cards"
+            },
+            {
+                "column_name": "ex_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_cards"
+            },
+            {
+                "column_name": "alias",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_cards"
+            }
+        ],
+        "joins": [],
+        "joinsColums": [],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "client_code",
+        "columns": [
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "client_code"
+            },
+            {
+                "column_name": "identifier",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "client_code"
+            },
+            {
+                "column_name": "hits",
+                "data_type": "smallint",
+                "is_nullable": "NO",
+                "column_default": "0",
+                "table_name": "client_code"
+            },
+            {
+                "column_name": "expire_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "client_code"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('client_code_id_seq'::regclass)",
+                "table_name": "client_code"
+            },
+            {
+                "column_name": "success_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_code"
+            },
+            {
+                "column_name": "code",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "client_code"
+            }
+        ],
+        "joins": [],
+        "joinsColums": [],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "client_jnt_account",
+        "columns": [
+            {
+                "column_name": "is_full",
+                "data_type": "boolean",
+                "is_nullable": "NO",
+                "column_default": "false",
+                "table_name": "client_jnt_account"
+            },
+            {
+                "column_name": "alias",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_jnt_account"
+            },
+            {
+                "column_name": "client_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "client_jnt_account"
+            },
+            {
+                "column_name": "jnt_account_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "client_jnt_account"
+            },
+            {
+                "column_name": "params",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_jnt_account"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "client_jnt_account"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('client_jnt_account_id_seq'::regclass)",
+                "table_name": "client_jnt_account"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "client_jnt_account"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "client_jnt_account"
+            }
+        ],
+        "joins": [
+            "client",
+            "jnt_account"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "client",
+                "left_column": "id",
+                "right_column": "client_id"
+            },
+            {
+                "table_name": "jnt_account",
+                "left_column": "id",
+                "right_column": "jnt_account_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "client_session",
+        "columns": [
+            {
+                "column_name": "client_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "client_session"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "client_session"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "client_session"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('client_session_id_seq'::regclass)",
+                "table_name": "client_session"
+            },
+            {
+                "column_name": "token",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "client_session"
+            }
+        ],
+        "joins": [
+            "client"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "client",
+                "left_column": "id",
+                "right_column": "client_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "config",
+        "columns": [
+            {
+                "column_name": "parameter_name",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "config"
+            },
+            {
+                "column_name": "value",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "config"
+            },
+            {
+                "column_name": "key",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "config"
+            },
+            {
+                "column_name": "parameter_group_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "config"
+            }
+        ],
+        "joins": [
+            "config_parameter_group"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "config_parameter_group",
+                "left_column": "id",
+                "right_column": "parameter_group_id"
+            }
+        ],
+        "primary_key": ""
+    },
+    {
+        "table_name": "config_parameter_group",
+        "columns": [
+            {
+                "column_name": "group_name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "config_parameter_group"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('config_parameter_group_id_seq'::regclass)",
+                "table_name": "config_parameter_group"
+            }
+        ],
+        "joins": [
+            "config"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "config",
+                "left_column": "parameter_group_id",
+                "right_column": "id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "data_source",
+        "columns": [
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "data_source"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "data_source"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "data_source"
+            },
+            {
+                "column_name": "parameters",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "data_source"
+            },
+            {
+                "column_name": "endpoint",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "data_source"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('payment_data_id_seq'::regclass)",
+                "table_name": "data_source"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "data_source"
+            }
+        ],
+        "joins": [
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "provider",
+                "left_column": "data_source_id",
+                "right_column": "id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "department",
+        "columns": [
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "department"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "department"
+            },
+            {
+                "column_name": "work_time",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "department"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "department"
+            },
+            {
+                "column_name": "coords",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "department"
+            },
+            {
+                "column_name": "email",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "department"
+            },
+            {
+                "column_name": "phone",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "department"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('department_id_seq'::regclass)",
+                "table_name": "department"
+            },
+            {
+                "column_name": "address",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "department"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "department"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "department"
+            }
+        ],
+        "joins": [
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "provider",
+                "left_column": "id",
+                "right_column": "provider_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "epd",
+        "columns": [
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "epd"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('epd_id_seq'::regclass)",
+                "table_name": "epd"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "epd"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "epd"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "epd"
+            }
+        ],
+        "joins": [
+            "jnt_account",
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "jnt_account",
+                "left_column": "epd_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "provider",
+                "left_column": "epd_id",
+                "right_column": "id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "faq",
+        "columns": [
+            {
+                "column_name": "link",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "faq"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('faq_id_seq'::regclass)",
+                "table_name": "faq"
+            },
+            {
+                "column_name": "category_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "faq"
+            },
+            {
+                "column_name": "image",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "faq"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "faq"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "faq"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "faq"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "faq"
+            },
+            {
+                "column_name": "description",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "faq"
+            }
+        ],
+        "joins": [
+            "faq_provider_link",
+            "faq_category"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "faq_provider_link",
+                "left_column": "faq_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "faq_category",
+                "left_column": "id",
+                "right_column": "category_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "faq_category",
+        "columns": [
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('faq_category_id_seq'::regclass)",
+                "table_name": "faq_category"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "faq_category"
+            }
+        ],
+        "joins": [
+            "faq"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "faq",
+                "left_column": "category_id",
+                "right_column": "id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "faq_provider_link",
+        "columns": [
+            {
+                "column_name": "faq_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "faq_provider_link"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('faq_provider_link_id_seq'::regclass)",
+                "table_name": "faq_provider_link"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "faq_provider_link"
+            }
+        ],
+        "joins": [
+            "faq",
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "faq",
+                "left_column": "id",
+                "right_column": "faq_id"
+            },
+            {
+                "table_name": "provider",
+                "left_column": "id",
+                "right_column": "provider_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "jnt_account",
+        "columns": [
+            {
+                "column_name": "jnt_account_num",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "jnt_account"
+            },
+            {
+                "column_name": "params",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "jnt_account"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "jnt_account"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('jnt_account_id_seq'::regclass)",
+                "table_name": "jnt_account"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "jnt_account"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "jnt_account"
+            },
+            {
+                "column_name": "epd_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "jnt_account"
+            }
+        ],
+        "joins": [
+            "client_account",
+            "client_jnt_account",
+            "payment",
+            "order",
+            "quiz_answers",
+            "epd"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "client_account",
+                "left_column": "jnt_account_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "client_jnt_account",
+                "left_column": "jnt_account_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "payment",
+                "left_column": "jnt_account_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "order",
+                "left_column": "els_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "quiz_answers",
+                "left_column": "jnt_account_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "epd",
+                "left_column": "id",
+                "right_column": "epd_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "news",
+        "columns": [
+            {
+                "column_name": "body",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "news"
+            },
+            {
+                "column_name": "link",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "news"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('news_id_seq'::regclass)",
+                "table_name": "news"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "news"
+            },
+            {
+                "column_name": "title",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "news"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "news"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "news"
+            },
+            {
+                "column_name": "staff_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "news"
+            }
+        ],
+        "joins": [
+            "news_provider_link",
+            "user"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "news_provider_link",
+                "left_column": "news_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "user",
+                "left_column": "id",
+                "right_column": "staff_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "news_provider_link",
+        "columns": [
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('news_provider_link_id_seq'::regclass)",
+                "table_name": "news_provider_link"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "news_provider_link"
+            },
+            {
+                "column_name": "news_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "news_provider_link"
+            }
+        ],
+        "joins": [
+            "news",
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "news",
+                "left_column": "id",
+                "right_column": "news_id"
+            },
+            {
+                "table_name": "provider",
+                "left_column": "id",
+                "right_column": "provider_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "order",
+        "columns": [
+            {
+                "column_name": "paytype_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "order"
+            },
+            {
+                "column_name": "client_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "order"
+            },
+            {
+                "column_name": "els_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order"
+            },
+            {
+                "column_name": "invoice_uid",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order"
+            },
+            {
+                "column_name": "device",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order"
+            },
+            {
+                "column_name": "final",
+                "data_type": "boolean",
+                "is_nullable": "NO",
+                "column_default": "false",
+                "table_name": "order"
+            },
+            {
+                "column_name": "operation",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order"
+            },
+            {
+                "column_name": "session",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order"
+            },
+            {
+                "column_name": "total",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "0",
+                "table_name": "order"
+            },
+            {
+                "column_name": "customer",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "order"
+            },
+            {
+                "column_name": "order",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "order"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "order"
+            },
+            {
+                "column_name": "status",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "order"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('order_id_seq'::regclass)",
+                "table_name": "order"
+            },
+            {
+                "column_name": "transaction_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order"
+            }
+        ],
+        "joins": [
+            "order_payment",
+            "order_process",
+            "cheque",
+            "jnt_account",
+            "client",
+            "paytype"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "order_payment",
+                "left_column": "order_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "order_process",
+                "left_column": "order_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "cheque",
+                "left_column": "order_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "jnt_account",
+                "left_column": "id",
+                "right_column": "els_id"
+            },
+            {
+                "table_name": "client",
+                "left_column": "id",
+                "right_column": "client_id"
+            },
+            {
+                "table_name": "paytype",
+                "left_column": "id",
+                "right_column": "paytype_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "order_payment",
+        "columns": [
+            {
+                "column_name": "inn",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "order_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "provider_service_name",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "tax",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "1",
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "lspu_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "sent_provider",
+                "data_type": "boolean",
+                "is_nullable": "NO",
+                "column_default": "false",
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "service_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "fiscalized",
+                "data_type": "boolean",
+                "is_nullable": "NO",
+                "column_default": "false",
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('order_payment_id_seq'::regclass)",
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "invoice_puid",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "amount",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "0",
+                "table_name": "order_payment"
+            },
+            {
+                "column_name": "service_name",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order_payment"
+            }
+        ],
+        "joins": [
+            "order",
+            "account",
+            "provider_service_link"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "order",
+                "left_column": "id",
+                "right_column": "order_id"
+            },
+            {
+                "table_name": "account",
+                "left_column": "id",
+                "right_column": "lspu_id"
+            },
+            {
+                "table_name": "provider_service_link",
+                "left_column": "id",
+                "right_column": "service_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "order_process",
+        "columns": [
+            {
+                "column_name": "order_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "order_process"
+            },
+            {
+                "column_name": "data",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "order_process"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('order_process_id_seq'::regclass)",
+                "table_name": "order_process"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "order_process"
+            },
+            {
+                "column_name": "process_type",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "order_process"
+            }
+        ],
+        "joins": [
+            "order"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "order",
+                "left_column": "id",
+                "right_column": "order_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "payment",
+        "columns": [
+            {
+                "column_name": "session",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment"
+            },
+            {
+                "column_name": "order",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment"
+            },
+            {
+                "column_name": "status",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "payment"
+            },
+            {
+                "column_name": "result",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment"
+            },
+            {
+                "column_name": "payment",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment"
+            },
+            {
+                "column_name": "invoice",
+                "data_type": "json",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "payment"
+            },
+            {
+                "column_name": "client_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment"
+            },
+            {
+                "column_name": "fee",
+                "data_type": "real",
+                "is_nullable": "NO",
+                "column_default": "0",
+                "table_name": "payment"
+            },
+            {
+                "column_name": "jnt_account_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment"
+            },
+            {
+                "column_name": "amount",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "0",
+                "table_name": "payment"
+            },
+            {
+                "column_name": "operation",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "payment"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('payment_id_seq'::regclass)",
+                "table_name": "payment"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "payment"
+            },
+            {
+                "column_name": "account_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment"
+            }
+        ],
+        "joins": [
+            "receipt",
+            "client",
+            "account",
+            "jnt_account"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "receipt",
+                "left_column": "payment_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "client",
+                "left_column": "id",
+                "right_column": "client_id"
+            },
+            {
+                "table_name": "account",
+                "left_column": "id",
+                "right_column": "account_id"
+            },
+            {
+                "table_name": "jnt_account",
+                "left_column": "id",
+                "right_column": "jnt_account_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "payment_source",
+        "columns": [
+            {
+                "column_name": "b2p_host",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "acquiring_host",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "point_code",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "b2p_sector",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "acquiring_merchant",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "acquiring_certificate",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "acquiring",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": "'ABR'::character varying",
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "endpoint",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('payment_source_id_seq'::regclass)",
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "apple_merchant",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment_source"
+            },
+            {
+                "column_name": "b2p_password",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "payment_source"
+            }
+        ],
+        "joins": [
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "provider",
+                "left_column": "payment_source_id",
+                "right_column": "id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "paytype",
+        "columns": [
+            {
+                "column_name": "key",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "paytype"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('paytype_id_seq'::regclass)",
+                "table_name": "paytype"
+            }
+        ],
+        "joins": [
+            "order"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "order",
+                "left_column": "paytype_id",
+                "right_column": "id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "provider",
+        "columns": [
+            {
+                "column_name": "epd_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "provider"
+            },
+            {
+                "column_name": "data_source_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "provider"
+            },
+            {
+                "column_name": "payment_source_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "provider"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "provider"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "provider"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": "now()",
+                "table_name": "provider"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('provider_id_seq'::regclass)",
+                "table_name": "provider"
+            },
+            {
+                "column_name": "receipt_source_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "provider"
+            },
+            {
+                "column_name": "parameters",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "provider"
+            },
+            {
+                "column_name": "ex_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "provider"
+            },
+            {
+                "column_name": "parent_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "provider"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "provider"
+            },
+            {
+                "column_name": "type_payment_code",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "provider"
+            },
+            {
+                "column_name": "organization_code",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "provider"
+            },
+            {
+                "column_name": "inn",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "provider"
+            }
+        ],
+        "joins": [
+            "account",
+            "department",
+            "provider_service_link",
+            "provider_setup",
+            "user_provider_link",
+            "news_provider_link",
+            "faq_provider_link",
+            "report_attachment",
+            "cheque",
+            "quiz_provider_link",
+            "quiz_answers",
+            "provider",
+            "data_source",
+            "payment_source",
+            "receipt_source",
+            "epd"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "account",
+                "left_column": "provider_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "department",
+                "left_column": "provider_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "provider_service_link",
+                "left_column": "provider_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "provider_setup",
+                "left_column": "provider_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "user_provider_link",
+                "left_column": "provider_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "news_provider_link",
+                "left_column": "provider_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "faq_provider_link",
+                "left_column": "provider_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "report_attachment",
+                "left_column": "provider_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "cheque",
+                "left_column": "provider_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "quiz_provider_link",
+                "left_column": "provider_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "quiz_answers",
+                "left_column": "provider_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "provider",
+                "left_column": "parent_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "data_source",
+                "left_column": "id",
+                "right_column": "data_source_id"
+            },
+            {
+                "table_name": "payment_source",
+                "left_column": "id",
+                "right_column": "payment_source_id"
+            },
+            {
+                "table_name": "receipt_source",
+                "left_column": "id",
+                "right_column": "receipt_source_id"
+            },
+            {
+                "table_name": "epd",
+                "left_column": "id",
+                "right_column": "epd_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "provider_service_link",
+        "columns": [
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('provider_service_link_id_seq'::regclass)",
+                "table_name": "provider_service_link"
+            },
+            {
+                "column_name": "service_name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "provider_service_link"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "provider_service_link"
+            },
+            {
+                "column_name": "service_id",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "provider_service_link"
+            },
+            {
+                "column_name": "service_uuid",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "provider_service_link"
+            }
+        ],
+        "joins": [
+            "order_payment",
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "order_payment",
+                "left_column": "service_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "provider",
+                "left_column": "id",
+                "right_column": "provider_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "provider_setup",
+        "columns": [
+            {
+                "column_name": "value",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "provider_setup"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('provider_setup_id_seq'::regclass)",
+                "table_name": "provider_setup"
+            },
+            {
+                "column_name": "key",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "provider_setup"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "provider_setup"
+            }
+        ],
+        "joins": [
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "provider",
+                "left_column": "id",
+                "right_column": "provider_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "quiz",
+        "columns": [
+            {
+                "column_name": "start_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "quiz"
+            },
+            {
+                "column_name": "initial_question_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "quiz"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('quiz_id_seq'::regclass)",
+                "table_name": "quiz"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "quiz"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "quiz"
+            },
+            {
+                "column_name": "title",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "quiz"
+            },
+            {
+                "column_name": "description",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz"
+            },
+            {
+                "column_name": "agreement",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz"
+            },
+            {
+                "column_name": "image",
+                "data_type": "bytea",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "quiz"
+            },
+            {
+                "column_name": "end_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "quiz"
+            },
+            {
+                "column_name": "autor",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz"
+            }
+        ],
+        "joins": [
+            "quiz_provider_link",
+            "quiz_answers",
+            "quiz_questions",
+            "user"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "quiz_provider_link",
+                "left_column": "quiz_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "quiz_answers",
+                "left_column": "quiz_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "quiz_questions",
+                "left_column": "quiz_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "user",
+                "left_column": "id",
+                "right_column": "autor"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "quiz_answers",
+        "columns": [
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "quiz_answers"
+            },
+            {
+                "column_name": "client_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_answers"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_answers"
+            },
+            {
+                "column_name": "quiz_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_answers"
+            },
+            {
+                "column_name": "account_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_answers"
+            },
+            {
+                "column_name": "jnt_account_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_answers"
+            },
+            {
+                "column_name": "answers_value",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "quiz_answers"
+            },
+            {
+                "column_name": "end_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "quiz_answers"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('quiz_answers_id_seq'::regclass)",
+                "table_name": "quiz_answers"
+            }
+        ],
+        "joins": [
+            "quiz",
+            "client",
+            "provider",
+            "account",
+            "jnt_account"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "quiz",
+                "left_column": "id",
+                "right_column": "quiz_id"
+            },
+            {
+                "table_name": "client",
+                "left_column": "id",
+                "right_column": "client_id"
+            },
+            {
+                "table_name": "provider",
+                "left_column": "id",
+                "right_column": "provider_id"
+            },
+            {
+                "table_name": "account",
+                "left_column": "id",
+                "right_column": "account_id"
+            },
+            {
+                "table_name": "jnt_account",
+                "left_column": "id",
+                "right_column": "jnt_account_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "quiz_provider_link",
+        "columns": [
+            {
+                "column_name": "quiz_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_provider_link"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('quiz_provider_link_id_seq'::regclass)",
+                "table_name": "quiz_provider_link"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_provider_link"
+            }
+        ],
+        "joins": [
+            "quiz",
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "quiz",
+                "left_column": "id",
+                "right_column": "quiz_id"
+            },
+            {
+                "table_name": "provider",
+                "left_column": "id",
+                "right_column": "provider_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "quiz_questions",
+        "columns": [
+            {
+                "column_name": "value_parametrs_question",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "quiz_questions"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "quiz_questions"
+            },
+            {
+                "column_name": "next_quiz_questions_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "quiz_questions"
+            },
+            {
+                "column_name": "title",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_questions"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "quiz_questions"
+            },
+            {
+                "column_name": "quiz_questions_type_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_questions"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('quiz_questions_id_seq'::regclass)",
+                "table_name": "quiz_questions"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "quiz_questions"
+            },
+            {
+                "column_name": "quiz_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_questions"
+            }
+        ],
+        "joins": [
+            "quiz_questions",
+            "quiz",
+            "quiz_type_question"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "quiz_questions",
+                "left_column": "next_quiz_questions_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "quiz",
+                "left_column": "initial_question_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "quiz_type_question",
+                "left_column": "id",
+                "right_column": "quiz_questions_type_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "quiz_type_question",
+        "columns": [
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_type_question"
+            },
+            {
+                "column_name": "type_front_component_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_type_question"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('quiz_type_question_id_seq'::regclass)",
+                "table_name": "quiz_type_question"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "quiz_type_question"
+            },
+            {
+                "column_name": "short_name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "quiz_type_question"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "quiz_type_question"
+            }
+        ],
+        "joins": [
+            "quiz_questions",
+            "type_front_component"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "quiz_questions",
+                "left_column": "quiz_questions_type_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "type_front_component",
+                "left_column": "id",
+                "right_column": "type_front_component_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "receipt",
+        "columns": [
+            {
+                "column_name": "payment_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "receipt"
+            },
+            {
+                "column_name": "response_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "receipt"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('receipt_id_seq'::regclass)",
+                "table_name": "receipt"
+            },
+            {
+                "column_name": "request",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "receipt"
+            },
+            {
+                "column_name": "response",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "receipt"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "receipt"
+            }
+        ],
+        "joins": [
+            "payment"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "payment",
+                "left_column": "id",
+                "right_column": "payment_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "receipt_source",
+        "columns": [
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "receipt_source"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "receipt_source"
+            },
+            {
+                "column_name": "host",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "receipt_source"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('receipt_source_id_seq'::regclass)",
+                "table_name": "receipt_source"
+            },
+            {
+                "column_name": "app_secret",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "receipt_source"
+            },
+            {
+                "column_name": "app_id",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "receipt_source"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "receipt_source"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "receipt_source"
+            }
+        ],
+        "joins": [
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "provider",
+                "left_column": "receipt_source_id",
+                "right_column": "id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "report_attachment",
+        "columns": [
+            {
+                "column_name": "report_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "report_attachment"
+            },
+            {
+                "column_name": "dt_ready",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "report_attachment"
+            },
+            {
+                "column_name": "dt_create",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "report_attachment"
+            },
+            {
+                "column_name": "error_message",
+                "data_type": "text",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "report_attachment"
+            },
+            {
+                "column_name": "buffer",
+                "data_type": "bytea",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "report_attachment"
+            },
+            {
+                "column_name": "dt_download",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "report_attachment"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "report_attachment"
+            },
+            {
+                "column_name": "user_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "report_attachment"
+            },
+            {
+                "column_name": "link",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "report_attachment"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('report_attachment_id_seq'::regclass)",
+                "table_name": "report_attachment"
+            }
+        ],
+        "joins": [
+            "user",
+            "reports",
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "user",
+                "left_column": "id",
+                "right_column": "user_id"
+            },
+            {
+                "table_name": "reports",
+                "left_column": "id",
+                "right_column": "report_id"
+            },
+            {
+                "table_name": "provider",
+                "left_column": "id",
+                "right_column": "provider_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "reports",
+        "columns": [
+            {
+                "column_name": "description",
+                "data_type": "text",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "reports"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('reports_id_seq'::regclass)",
+                "table_name": "reports"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "reports"
+            },
+            {
+                "column_name": "parameters",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "reports"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "reports"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "reports"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "reports"
+            },
+            {
+                "column_name": "report_uuid",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "reports"
+            },
+            {
+                "column_name": "format",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "reports"
+            }
+        ],
+        "joins": [
+            "reports_user_link",
+            "report_attachment"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "reports_user_link",
+                "left_column": "report_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "report_attachment",
+                "left_column": "report_id",
+                "right_column": "id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "reports_user_link",
+        "columns": [
+            {
+                "column_name": "report_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "reports_user_link"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('reports_user_link_id_seq'::regclass)",
+                "table_name": "reports_user_link"
+            },
+            {
+                "column_name": "user_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "reports_user_link"
+            }
+        ],
+        "joins": [
+            "user",
+            "reports"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "user",
+                "left_column": "id",
+                "right_column": "user_id"
+            },
+            {
+                "table_name": "reports",
+                "left_column": "id",
+                "right_column": "report_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "ticket",
+        "columns": [
+            {
+                "column_name": "email",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "ticket"
+            },
+            {
+                "column_name": "account_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "ticket"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('ticket_id_seq'::regclass)",
+                "table_name": "ticket"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "ticket"
+            },
+            {
+                "column_name": "ex_key",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "ticket"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "ticket"
+            },
+            {
+                "column_name": "description",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "ticket"
+            },
+            {
+                "column_name": "summary",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "ticket"
+            },
+            {
+                "column_name": "ex_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "ticket"
+            },
+            {
+                "column_name": "ex_params",
+                "data_type": "json",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "ticket"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "ticket"
+            },
+            {
+                "column_name": "client_id",
+                "data_type": "integer",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "ticket"
+            }
+        ],
+        "joins": [
+            "client",
+            "account"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "client",
+                "left_column": "id",
+                "right_column": "client_id"
+            },
+            {
+                "table_name": "account",
+                "left_column": "id",
+                "right_column": "account_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "ticket_attachment",
+        "columns": [
+            {
+                "column_name": "buffer",
+                "data_type": "bytea",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "ticket_attachment"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('ticket_attachment_id_seq'::regclass)",
+                "table_name": "ticket_attachment"
+            },
+            {
+                "column_name": "ticket_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "ticket_attachment"
+            },
+            {
+                "column_name": "filename",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "ticket_attachment"
+            }
+        ],
+        "joins": [],
+        "joinsColums": [],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "type_front_component",
+        "columns": [
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('type_front_component_id_seq'::regclass)",
+                "table_name": "type_front_component"
+            },
+            {
+                "column_name": "component_name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "type_front_component"
+            }
+        ],
+        "joins": [
+            "quiz_type_question"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "quiz_type_question",
+                "left_column": "type_front_component_id",
+                "right_column": "id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "user",
+        "columns": [
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "user"
+            },
+            {
+                "column_name": "role_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "user"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('staff_id_seq'::regclass)",
+                "table_name": "user"
+            },
+            {
+                "column_name": "login",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "user"
+            },
+            {
+                "column_name": "company",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "user"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "user"
+            },
+            {
+                "column_name": "email",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "user"
+            },
+            {
+                "column_name": "phone",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "user"
+            },
+            {
+                "column_name": "position",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "user"
+            },
+            {
+                "column_name": "hash",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "user"
+            },
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "user"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "user"
+            }
+        ],
+        "joins": [
+            "news",
+            "user_provider_link",
+            "user_session",
+            "reports_user_link",
+            "report_attachment",
+            "quiz",
+            "user_role"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "news",
+                "left_column": "staff_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "user_provider_link",
+                "left_column": "user_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "user_session",
+                "left_column": "user_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "reports_user_link",
+                "left_column": "user_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "report_attachment",
+                "left_column": "user_id",
+                "right_column": "id"
+            },
+            {
+                "table_name": "quiz",
+                "left_column": "autor",
+                "right_column": "id"
+            },
+            {
+                "table_name": "user_role",
+                "left_column": "id",
+                "right_column": "role_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "user_provider_link",
+        "columns": [
+            {
+                "column_name": "user_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "user_provider_link"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('user_provider_link_id_seq'::regclass)",
+                "table_name": "user_provider_link"
+            },
+            {
+                "column_name": "provider_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "user_provider_link"
+            }
+        ],
+        "joins": [
+            "user",
+            "provider"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "user",
+                "left_column": "id",
+                "right_column": "user_id"
+            },
+            {
+                "table_name": "provider",
+                "left_column": "id",
+                "right_column": "provider_id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "user_role",
+        "columns": [
+            {
+                "column_name": "delete_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "user_role"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('user_role_id_seq'::regclass)",
+                "table_name": "user_role"
+            },
+            {
+                "column_name": "code",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "user_role"
+            },
+            {
+                "column_name": "update_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "user_role"
+            },
+            {
+                "column_name": "description",
+                "data_type": "character varying",
+                "is_nullable": "YES",
+                "column_default": null,
+                "table_name": "user_role"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "user_role"
+            },
+            {
+                "column_name": "name",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "user_role"
+            }
+        ],
+        "joins": [
+            "user"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "user",
+                "left_column": "role_id",
+                "right_column": "id"
+            }
+        ],
+        "primary_key": "id"
+    },
+    {
+        "table_name": "user_session",
+        "columns": [
+            {
+                "column_name": "expire_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "user_session"
+            },
+            {
+                "column_name": "user_id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "user_session"
+            },
+            {
+                "column_name": "id",
+                "data_type": "integer",
+                "is_nullable": "NO",
+                "column_default": "nextval('user_session_id_seq'::regclass)",
+                "table_name": "user_session"
+            },
+            {
+                "column_name": "token",
+                "data_type": "character varying",
+                "is_nullable": "NO",
+                "column_default": null,
+                "table_name": "user_session"
+            },
+            {
+                "column_name": "create_date",
+                "data_type": "timestamp with time zone",
+                "is_nullable": "NO",
+                "column_default": "now()",
+                "table_name": "user_session"
+            }
+        ],
+        "joins": [
+            "user"
+        ],
+        "joinsColums": [
+            {
+                "table_name": "user",
+                "left_column": "id",
+                "right_column": "user_id"
+            }
+        ],
+        "primary_key": "id"
+    }
+]
