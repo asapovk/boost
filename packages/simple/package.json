@@ -1,0 +1,27 @@
+{
+    "name": "@boost/simple",
+    "version": "0.1.0",
+    "description": "Sinple express app example with boostorm",
+    "main": "index",
+    "scripts": {
+        "start": "ts-node ./src/index.ts -env DEBUG",
+        "fork": "node ./build/index.js -env PRODUCTION",
+        "build": "tsc &&  cp -R ./src/repository/*.json ./dist/repository",
+        "schema": "node scripts/boostorm/schema.js -env DEBUG",
+        "return": "ts-node scripts/boostorm/return.ts -env DEBUG",
+        "debug": "ts-node scripts/boostorm/debug.ts -env DEBUG"
+    },
+    "bin": "dist/index.js",
+    "author": "Konstantin Astapov",
+    "license": "MIT",
+    "dependencies": {
+        "@types/pg": "^8.6.1",
+        "pg": "^8.7.1",
+        "typescript": "^4.4.3"
+    },
+    "devDependencies": {
+        "@types/node": "^12.0.4",
+        "ts-node": "^8.2.0",
+        "tsconfig-paths": "^3.8.0"
+    }
+}

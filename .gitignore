@@ -1,0 +1,5 @@
+node_modules
+dist
+production.json
+local.json
+yarn.lock
