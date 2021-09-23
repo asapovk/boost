@@ -7,7 +7,8 @@ import QueryBuilder from '../../QueryBuilder';
 export type SubSelectReturn<L> = {
     type: 'select',
     value: string,
-    inputArgs: any
+    inputArgs: any,
+    selectColsMap: object,
     selectedFields: Array<L>
 }
 
@@ -68,12 +69,14 @@ const SubSelect: SubSelectType = (args) => (parent) => {
     const parentParems = parent.getParams();
     const qb = new Select(parent.schema, parentParems.length)
     const qs = qb.select(args)
+    const selectColsMap = qb.getSelectColsMap()
     parent.pushParams(qb.getParams())
     return {
         value: qs,
         type: 'select',
         inputArgs: args,
-        selectedFields: args.select.columns
+        selectedFields: args.select.columns,
+        selectColsMap
     }
 }
 

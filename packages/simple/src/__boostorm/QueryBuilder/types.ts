@@ -21,7 +21,9 @@ namespace IQueryBuilder {
             aggregate?: 'count' | 'json_agg'
         }
     },
-        joinToTable: string) => void
+        joinToTable: string,
+        colsMap?: object | null
+    ) => void
 
     export type AddJoinString = <T extends keyof EntitieTypes._Entities>(params: JointParams<T> | Array<JointParams<T>>, joinToTable: string) => void
 

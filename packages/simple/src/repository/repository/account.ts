@@ -9,7 +9,7 @@ class AccountRepository extends Repository {
     }
 
 
-    @R('selectAccount', {}, true)
+    @R('selectAccount', {})
     public async selectAccountUnsafe(args: RepoType['selectAccount']['params']): Promise<RepoType['selectAccount']['response']> {
         return await this.selectUnsafe({
             'id': 'number',
@@ -67,7 +67,7 @@ class AccountRepository extends Repository {
                     'select': {
                         'columns': ['account', 'id', 'provider_id', 'ex_uuid', 'ex_id']
                     },
-                    limit: 'infinity',
+                    limit: 100,
                     'offset': 0
                 }),
                 'b': SubSelect({

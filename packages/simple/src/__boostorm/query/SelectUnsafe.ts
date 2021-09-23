@@ -65,6 +65,12 @@ class SelectUnsafe extends QueryBuilder {
     private type: Object
 
 
+    private selectColsMap: object = {}
+    public getSelectColsMap = () => {
+        return this.selectColsMap
+    }
+
+
 
     private genetateRetunObj(argument: any, returnType = {}) {
 
@@ -166,6 +172,7 @@ class SelectUnsafe extends QueryBuilder {
         let sindex = 0
         for (let s of args.select.columns) {
             this.selectString += `${!sindex ? '' : ',\n'}${this.table}.${s} as "${makeFieldType(this.table, s as string)}"`
+            this.selectColsMap[s as string] = makeFieldType(this.table, s as string)
             if (args.select.count || args.select.sum) {
                 this.pushGroupBYCols(`${this.table}.${s}`)
             }

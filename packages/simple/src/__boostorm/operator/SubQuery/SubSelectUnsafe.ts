@@ -10,6 +10,7 @@ export type SubSelectUnsafeReturn<M> = {
     selectedFields: Array<M>,
     inputArgs: any
     typeArgs: any
+    selectColsMap: object
 }
 
 export type SubSelectUnsafeArgs<Type extends object,
@@ -69,13 +70,15 @@ const SubSelectUnsafe: SubSelectUnsafeType = (type) => (args) => (parent) => {
     const parentParems = parent.getParams();
     const sq = new SelectUnsafe(parent.schema, parentParems.length)
     const qs = sq.selectUnsafe(type)(args)
+    const selectColsMap = sq.getSelectColsMap()
     parent.pushParams(sq.getParams())
     return {
         value: qs,
         type: 'selectUnsafe',
         selectedFields: args.select.columns,
         inputArgs: args,
-        typeArgs: type
+        typeArgs: type,
+        selectColsMap
     }
 }
 

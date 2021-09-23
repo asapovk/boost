@@ -204,10 +204,24 @@ export class QueryBuilder {
     }
 
 
-    protected addJoinString_for_selectWith: IQueryBuilder.AddJoinStringForSelectWith = (args, joinToTable) => {
+    protected addJoinString_for_selectWith: IQueryBuilder.AddJoinStringForSelectWith = (args, joinToTable, colsMap) => {
+
         let index = 0
         for (let j in args) {
-            let j_str = `\n${args[j].joinOperator ? args[j].joinOperator + ' ' : ''}join ${j} on ${joinToTable}.${args[j].on.left} ${args[j].on.operator} ${j}.${args[j].on.right}`
+            let trueLeftColName = args[j].on.left
+            let trueRightColName = args[j].on.right
+
+
+            if (colsMap) {
+                if (colsMap[joinToTable] && colsMap[joinToTable][args[j].on.left]) {
+                    trueLeftColName = `"${colsMap[joinToTable][args[j].on.left]}"`
+                }
+                if (colsMap[j] && colsMap[j][args[j].on.right]) {
+                    trueRightColName = `"${colsMap[j][args[j].on.right]}"`
+                }
+            }
+
+            let j_str = `\n${args[j].joinOperator ? args[j].joinOperator + ' ' : ''}join ${j} on ${joinToTable}.${trueLeftColName} ${args[j].on.operator} ${j}.${trueRightColName}`
             this.joinString += j_str
             if (args[j].select && !args[j].aggregate) {
                 for (let s of args[j].select as Array<unknown>) {
@@ -220,7 +234,7 @@ export class QueryBuilder {
                 this.addWhereString(args[j].where as any, j)
             }
             if (args[j].join) {
-                this.addJoinString_for_selectWith(args[j].join as any, j)
+                this.addJoinString_for_selectWith(args[j].join as any, j, colsMap)
             }
             if (args[j].aggregate) {
                 let js_str = `, \n${args[j].aggregate}(${j}.*) as "${makeFieldType(this.table, j)}"`

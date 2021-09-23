@@ -126,18 +126,24 @@ class SelectWith extends QueryBuilder {
     public selectWith = <T extends { [key: string]: (a: any) => unknown }, K extends keyof T>(args: SelectWithArgs<T, K>) => {
 
         this.table = args.select.from as string
+        let colsMap = {}
 
         let windex = 0
         for (let s in args.with) {
             //@ts-ignore
-
-            const selStr = `${(!windex ? 'with' : ',\n')} ${s} as (\n${args.with[s](this).value}\n)`
+            const subselectReturn = args.with[s](this)
+            //@ts-ignore
+            const selStr = `${(!windex ? 'with' : ',\n')} ${s} as (\n${subselectReturn.value}\n)`
+            //@ts-ignore  
+            colsMap[s] = subselectReturn.selectColsMap
             this.withString += selStr
             windex += 1
         }
 
+
+
         //@ts-ignore
-        this.addJoinString_for_selectWith(args.select.join, this.table)
+        this.addJoinString_for_selectWith(args.select.join, this.table, colsMap)
 
         return `${this.withString}\nselect * from ${args.select.from} ${this.joinString}`
     }
