@@ -105,7 +105,7 @@ export class Schema {
             type = 'Date'
         }
 
-        if (col.data_type === 'integer' || col.data_type === 'smallint') {
+        if (col.data_type === 'integer' || col.data_type === 'smallint' || col.data_type === 'bigint' || col.data_type === 'real') {
             type = 'number'
         }
 
