@@ -52,7 +52,7 @@ class Insert extends Query {
             selStr = `\nvalues(${this.paramsArrayNumbers.join(',')})`
         }
 
-        return `insert into ${args.table} \n(${paramsArrayNames.join(',')}) ${selStr}  \nreturning *`
+        return `insert into "${args.table}" \n(${paramsArrayNames.join(',')}) ${selStr}  \nreturning *`
     }
 
 }

@@ -65,47 +65,47 @@ class Select extends QueryBuilder {
 
         return this.selectColsMap
     }
+    private returnType: object = {}
 
-
-    private genetateRetunObj(argument: any, returnType = {}) {
+    private genetateRetunObj(argument: any) {
         if (argument.select && argument.select.columns) {
             const rootSelectCols = argument.select.columns
             for (let c of rootSelectCols) {
-                returnType[c as string] = c as string
+                this.returnType[c as string] = c as string
             }
         }
         if (argument.select && argument.select.count) {
-            returnType[argument.select.count as string] = argument.select.count as string
+            this.returnType[argument.select.count as string] = argument.select.count as string
         }
         if (argument.select && argument.select.sum) {
-            returnType[argument.select.sum as string] = argument.select.sum as string
+            this.returnType[argument.select.sum as string] = argument.select.sum as string
         }
         if (argument.select && argument.select.dateTrunc) {
-            returnType[argument.select.dateTrunc.col as string] = argument.select.dateTrunc.col as string
+            this.returnType[argument.select.dateTrunc.col as string] = argument.select.dateTrunc.col as string
         }
 
         if (argument.join) {
             for (let t in argument.join) {
                 if (argument.join[t].aggregate) {
-                    returnType[t] = [t]
+                    this.returnType[t] = [t]
                 }
                 else if (argument.join[t].select) {
                     for (let s of argument.join[t].select) {
-                        if (!returnType[t]) {
-                            returnType[t] = {
+                        if (!this.returnType[t]) {
+                            this.returnType[t] = {
                                 [s]: s
                             }
                         }
                         else {
-                            returnType[t][s] = s
+                            this.returnType[t][s] = s
                         }
                     }
                 }
-                return this.genetateRetunObj(argument.join[t], returnType)
+                this.genetateRetunObj(argument.join[t])
             }
         }
         //console.log(returnType)
-        return returnType
+        return this.returnType
 
     }
 

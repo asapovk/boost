@@ -35,10 +35,11 @@ class SelectWith extends QueryBuilder {
         for (let s in args.with) {
             //@ts-ignore
             const tableName = args.with[s](this).inputArgs.from
+            this.returnType = {}
             returnObj = {
                 ...returnObj, ...{
                     //@ts-ignore
-                    [tableName]: this.generateReturnForWith(args.with[s](this).inputArgs, {})
+                    [tableName]: this.generateReturnForWith(args.with[s](this).inputArgs)
                 }
             }
         }
@@ -47,44 +48,46 @@ class SelectWith extends QueryBuilder {
 
     }
 
-    private generateReturnForWith(argument: any, returnType = {}) {
+    private returnType: object = {}
+
+    private generateReturnForWith(argument: any) {
         if (argument.select && argument.select.columns) {
             const rootSelectCols = argument.select.columns
             for (let c of rootSelectCols) {
-                returnType[c as string] = c as string
+                this.returnType[c as string] = c as string
             }
         }
         if (argument.select && argument.select.count) {
-            returnType[argument.select.count as string] = argument.select.count as string
+            this.returnType[argument.select.count as string] = argument.select.count as string
         }
         if (argument.select && argument.select.sum) {
-            returnType[argument.select.sum as string] = argument.select.sum as string
+            this.returnType[argument.select.sum as string] = argument.select.sum as string
         }
         if (argument.select && argument.select.dateTrunc) {
-            returnType[argument.select.dateTrunc.col as string] = argument.select.dateTrunc.col as string
+            this.returnType[argument.select.dateTrunc.col as string] = argument.select.dateTrunc.col as string
         }
 
         if (argument.join) {
             for (let t in argument.join) {
                 if (argument.join[t].aggregate) {
-                    returnType[t] = [t]
+                    this.returnType[t] = [t]
                 }
                 else if (argument.join[t].select) {
                     for (let s of argument.join[t].select) {
-                        if (!returnType[t]) {
-                            returnType[t] = {
+                        if (!this.returnType[t]) {
+                            this.returnType[t] = {
                                 [s]: s
                             }
                         }
                         else {
-                            returnType[t][s] = s
+                            this.returnType[t][s] = s
                         }
                     }
                 }
-                return this.generateReturnForWith(argument.join[t], returnType)
+                this.generateReturnForWith(argument.join[t])
             }
         }
-        return returnType
+        return this.returnType
 
     }
 

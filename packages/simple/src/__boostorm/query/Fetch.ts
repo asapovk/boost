@@ -24,26 +24,26 @@ class Fetch extends Query {
     constructor(schema: Schema, paramsShift?: number) {
         super(schema, paramsShift)
     }
+    private returnType: object = {}
 
-
-    private processFetch(args: any, returnType = {}) {
+    private processFetch(args: any) {
         const argument = args as any
 
-        if (argument.select && !Object.keys(returnType).length) {
+        if (argument.select && !Object.keys(this.returnType).length) {
             if (Array.isArray(argument.select)) {
                 for (let s of argument.select) {
-                    returnType[s] = s
+                    this.returnType[s] = s
                 }
             }
             else {
-                returnType[argument.select] = argument.select
+                this.returnType[argument.select] = argument.select
             }
         }
-        if (!argument.select && !Object.keys(returnType).length) {
+        if (!argument.select && !Object.keys(this.returnType).length) {
             const cols = this.schema.getColumnsOfTable(argument.table)
             if (cols) {
                 for (let c of cols) {
-                    returnType[c] = c
+                    this.returnType[c] = c
                 }
             }
 
@@ -55,10 +55,9 @@ class Fetch extends Query {
                     const select = j.select
                     const columns = this.schema.getColumnsOfTable(tableName)
                     if (columns && select) {
-                        returnType[j.table] = { [select]: columns }
+                        this.returnType[j.table] = { [select]: columns }
                     }
-                    return this.processFetch(argument.join, returnType)
-
+                    this.processFetch(j)
                 }
             }
             else {
@@ -66,15 +65,15 @@ class Fetch extends Query {
                 const select = argument.join.select
                 const columns = this.schema.getColumnsOfTable(tableName)
                 if (columns && select) {
-                    returnType[argument.join.table] = { [select]: columns }
+                    this.returnType[argument.join.table] = { [select]: columns }
                 }
 
-                return this.processFetch(argument.join, returnType)
+                this.processFetch(argument.join)
 
             }
         }
-        //console.log(returnType)
-        return returnType
+        //console.log(this.returnType)
+        return this.returnType
     }
 
     public generateReturnType(args: any) {
