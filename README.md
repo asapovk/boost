@@ -1,6 +1,6 @@
-# Boo
+# Boost
 
-Boo is a boilerplate code for  node.js typescript applications. All the templates contain  __boostorm folder in src with code for dealing with sql queries into rDB.  Boo allows to import schema from database, build typescript types of all the entities and construct sql queries with strongly typed methods of the query builder. It provide as with tools for debugging queries.  
+Boost is a boilerplate code for  node.js typescript applications. All the templates contain  __boostorm folder in src with code for dealing with sql queries into rDB.  Boost allows to import schema from database, build typescript types of all the entities and construct sql queries with strongly typed methods of the query builder. It provide as with tools for debugging queries.  
 
 
 
